@@ -1,0 +1,12 @@
+import java.util.*;
+
+public class Main{
+    public static void main(Stringp[] args){
+        Scanner sc = new Scanner(System.in);
+        int number1 = sc.nextInt();
+        int number2 = sc.nextInt();
+        sc.close();
+        number1 = (number1-9)*60;
+        System.out.println(number1+number2);
+    }
+}
