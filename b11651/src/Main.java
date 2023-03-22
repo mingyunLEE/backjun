@@ -23,7 +23,9 @@ public class Main {
         for (int i = 0; i < arrLength; i++) {
             System.out.println(arr[i][1] + " " + arr[i][0]);
 
+
         }
+
 
     }
 }
