@@ -5,14 +5,22 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
-        BigInteger result = new BigInteger(String.valueOf(1));
-        sc.close();
-        for (int i = 1; i <= number; i++) {
-            result = result.multiply(BigInteger.valueOf(i));
-
-        }
-        System.out.println(result);
+        BigInteger output = fibonacci(number);
+        System.out.println(output);
 
     }
 
+    private static BigInteger fibonacci(int num) {
+        ArrayList<BigInteger> memo = new ArrayList<>();
+        memo.add(BigInteger.valueOf(0));
+        memo.add(BigInteger.valueOf(1));
+        return aux(memo, num);
+    }
+
+    private static BigInteger aux(ArrayList<BigInteger> memo, int num) {
+        if (memo.size() <= num){
+            memo.add(aux(memo, num -1).add(aux(memo,num-2)));
+        }
+        return memo.get(num);
+    }
 }
