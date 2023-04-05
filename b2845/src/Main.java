@@ -15,8 +15,9 @@ public class Main {
         StringBuilder sb = new StringBuilder();
         while(st.hasMoreTokens()){
             int n = Integer.parseInt(st.nextToken());
-            sb.append(n - sp + "");
+            sb.append(n - sp + " ");
         }
         System.out.println(sb);
     }
 }
+
